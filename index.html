@@ -141,7 +141,7 @@
             color: #00d4ff;
             text-decoration: none;
             font-weight: bold;
-            font-family: 'Courier New', Courier, monospace;
+            font-family: Arial, sans-serif;
             padding: 2px 4px;
             position: relative;
             transition: all 0.3s ease;
@@ -155,24 +155,40 @@
             text-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
         }
         
+        .labs-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #00d4ff, #00ffff);
+            transition: width 0.3s ease;
+        }
+        
+        .labs-link:hover::after {
+            width: 100%;
+        }
+        
         .links {
             margin-top: 20px;
             font-family: Arial, sans-serif;
         }
         
         .links a {
-            color: #667eea;
+            color: #00d4ff;
             text-decoration: none;
             margin: 0 8px;
             transition: all 0.3s ease;
             position: relative;
-            font-weight: 500;
+            font-weight: bold;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
         }
         
         .links a:hover {
-            color: #764ba2;
-            transform: translateY(-2px);
-            display: inline-block;
+            color: #00b8e6;
+            text-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
         }
         
         .links a::after {
@@ -182,7 +198,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, #ff00ff, #00ffff);
+            background: linear-gradient(90deg, #00d4ff, #00ffff);
             transition: width 0.3s ease;
         }
         
@@ -192,7 +208,7 @@
         
         .footer {
             margin-top: 40px;
-            font-size: 14px;
+            font-size: 16px;
             color: #1a1a1a;
             background: rgba(255, 255, 255, 0.95);
             padding: 15px 25px;
